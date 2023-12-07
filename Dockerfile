@@ -1,4 +1,4 @@
-FROM node:18
+FROM scratch
 WORKDIR ./
 COPY package*.json ./
 RUN npm install
