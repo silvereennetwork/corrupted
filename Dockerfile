@@ -1,8 +1,6 @@
 FROM scratch
 WORKDIR ./
-COPY package*.json ./
 RUN npm install
-COPY . .
 EXPOSE 7000
 RUN npm run build
 EXPOSE 3000
