@@ -32,6 +32,7 @@
     animation: bg-animation 0.2s infinite;
     opacity: 0.9;
     visibility: visible;
+    z-index: -1;
   }
 
   @keyframes bg-animation {
