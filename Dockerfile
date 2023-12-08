@@ -1,9 +1,9 @@
 FROM node:18
 WORKDIR ./
-#COPY package*.json ./
+COPY package*.json ./
 RUN npm install
-#COPY . .
+COPY . .
 EXPOSE 3000
 RUN npm run build
-RUN node build
-#CMD [ "node", "./build/index.js" ]
+#RUN node build
+CMD [ "node", "./build/index.js" ]
