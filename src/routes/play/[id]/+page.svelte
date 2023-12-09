@@ -65,10 +65,10 @@
         <span class="game-creator text-gray-300 text-lg">By {game.author}</span>
       </div>
       <div class="icons flex gap-4">
-        <i class="fas fa-camera text-white text-lg cursor-pointer" on:click={() => console.log('Screenshot button clicked')} on:keydown={() => {}}></i>
-        <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" on:click={() => window.open(game.link)} on:keydown={() => {}}></i>
-        <i class="fas fa-expand text-white text-lg cursor-pointer" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}}></i>
-        <i class="fas fa-sync-alt text-white text-lg cursor-pointer" on:click={refreshGame} on:keydown={() => {}}></i>
+        <i class="fas fa-camera text-white text-lg cursor-pointer" on:click={() => console.log('Screenshot button clicked')} on:keydown={() => {}} title="Screenshot"></i>
+        <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" on:click={() => window.open(game.link)} on:keydown={() => {}} title="Open in new tab"></i>
+        <i class="fas fa-expand text-white text-lg cursor-pointer" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}} title="Fullscreen"></i>
+        <i class="fas fa-sync-alt text-white text-lg cursor-pointer" on:click={refreshGame} on:keydown={() => {}} title="Reload"></i>
       </div>
     </div>
     {:else}
