@@ -7,10 +7,12 @@
    */
   let games = [];
   let search = "";
+  let isLoading = true;
 
   onMount(async () => {
     const response = await fetch("/games.json");
     games = await response.json();
+    isLoading = false;
   });
 
   /**
@@ -33,6 +35,23 @@
   <input bind:value="{search}" placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
 </div>
 
+{#if isLoading}
+  <div class="flex flex-col items-center justify-center pt-40">
+    <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-48 w-48"></div>
+    <p class="text-white text-3xl mt-4">Loading...</p>
+  </div>
+  <style>
+    .loader {
+      border-top-color: rgb(67 56 202);
+      animation: spin 0.5s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+{:else}
 <!-- TODO: add tags at some point -->
 <div class="game-card-container p-5 m-5 flex flex-wrap justify-center">
   {#each visibleGames as game (game.id)}
@@ -51,3 +70,4 @@
   </a>
   {/each}
 </div>
+{/if}

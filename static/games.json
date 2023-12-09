@@ -2,27 +2,31 @@
   {
     "id": 1,
     "title": "2048",
+    "author": "Gabriele Cirulli",
     "image": "/games/2048.png",
-    "link": "/games/2048.html",
+    "link": "https://3kho.github.io/projects/2048/index.html",
     "description": "This is 2048"
   },
   {
     "id": 2,
     "title": "Slope",
+    "author": "Rob Kay",
     "image": "/games/slope.jpg",
-    "link": "/games/slope.html",
+    "link": "https://3kho.github.io/projects/slope/index.html",
     "description": "This is Slope"
   },
   {
     "id": 3,
     "title": "Tunnel Rush",
-    "image": "/games/tunnel-rush.jpg",
-    "link": "/games/tunnel-rush.html",
+    "author": "Deer Cat",
+    "image": "https://3kho.github.io/projects/tunnel-rush/img/tunnel.jpg",
+    "link": "https://3kho.github.io/projects/tunnel-rush/index.html",
     "description": "This is Tunnel Rush"
   },
   {
     "id": 4,
     "title": "1v1.LOL",
+    "author": "JustPlay.LOL",
     "image": "https://3kho.github.io/projects/1v1lol/splash.png",
     "link": "https://3kho.github.io/projects/1v1lol/",
     "description": "This is 1v1.LOL"
@@ -30,6 +34,7 @@
   {
     "id": 5,
     "title": "Among Us",
+    "author": "Innersloth",
     "image": "https://3kho.github.io/projects/among-us/red.png",
     "link": "https://3kho.github.io/projects/among-us",
     "description": "This is Among Us"
@@ -37,6 +42,7 @@
   {
     "id": 6,
     "title": "Basketball Stars",
+    "author": "Madpuffers",
     "image": "https://3kho.github.io/projects/basketball-stars/assets/images/basketball-stars.png",
     "link": "https://3kho.github.io/projects/basketball-stars",
     "description": "This is Basketball Stars"
@@ -44,6 +50,7 @@
   {
     "id": 7,
     "title": "BitLife",
+    "author": "Candywriter",
     "image": "https://3kho.github.io/projects/bitlife/logo.png",
     "link": "https://3kho.github.io/projects/bitlife",
     "description": "This is BitLife"
@@ -51,6 +58,7 @@
   {
     "id": 8,
     "title": "Boxing Random",
+    "author": "RHM Interactive",
     "image": "https://3kho.github.io/projects/boxing-random/512x512.jpg",
     "link": "https://3kho.github.io/projects/boxing-random",
     "description": "This is Boxing Random"
@@ -58,6 +66,7 @@
   {
     "id": 9,
     "title": "Cannon Basketball 4",
+    "author": "Oleg Kuzyk",
     "image": "https://3kho.github.io/projects/cannon-basketball-4/img/splash.png",
     "link": "https://3kho.github.io/projects/cannon-basketball-4",
     "description": "This is Cannon Basketball 4"
@@ -65,6 +74,7 @@
   {
     "id": 10,
     "title": "Cell Machine",
+    "author": "Sam Hogan",
     "image": "https://3kho.github.io/projects/cell-machine/img/te9nDu.png",
     "link": "https://3kho.github.io/projects/cell-machine",
     "description": "This is Cell Machine"
@@ -72,6 +82,7 @@
   {
     "id": 11,
     "title": "Cluster Rush",
+    "author": " Landfall Games",
     "image": "https://3kho.github.io/projects/cluster-rush/splash.png",
     "link": "https://3kho.github.io/projects/cluster-rush",
     "description": "This is Cluster Rush"
@@ -79,6 +90,7 @@
   {
     "id": 12,
     "title": "Cookie Clicker",
+    "author": "Orteil",
     "image": "https://3kho.github.io/projects/cookie-clicker/cookie1.jpeg",
     "link": "https://3kho.github.io/projects/cookie-clicker",
     "description": "This is Cookie Clicker"
@@ -86,6 +98,7 @@
   {
     "id": 13,
     "title": "Core Ball",
+    "author": "Unknown",
     "image": "https://3kho.github.io/projects/core-ball/pr_source.png",
     "link": "https://3kho.github.io/projects/core-ball",
     "description": "This is Core Ball"
@@ -93,6 +106,7 @@
   {
     "id": 14,
     "title": "Crossy Road",
+    "author": "Hipster Whale",
     "image": "https://3kho.github.io/projects/crossyroad/crossyroad.png",
     "link": "https://3kho.github.io/projects/crossyroad",
     "description": "This is Crossy Road"
@@ -100,6 +114,7 @@
   {
     "id": 15,
     "title": "Cut the Rope",
+    "author": "ZeptoLab",
     "image": "https://3kho.github.io/projects/ctr/logo.png",
     "link": "https://3kho.github.io/projects/ctr",
     "description": "This is Cut the Rope"
@@ -107,6 +122,7 @@
   {
     "id": 16,
     "title": "Cubefield",
+    "author": "YoArcade",
     "image": "https://3kho.github.io/projects/cubefield/assets/unnamed.png",
     "link": "https://3kho.github.io/projects/cubefield",
     "description": "This is Cubefield"
@@ -114,6 +130,7 @@
   {
     "id": 17,
     "title": "Death Run 3D",
+    "author": "Y8",
     "image": "https://3kho.github.io/projects/death-run-3d/img/death.png",
     "link": "https://3kho.github.io/projects/death-run-3d",
     "description": "This is Death Run 3D"
@@ -121,6 +138,7 @@
   {
     "id": 18,
     "title": "Defend the Tank",
+    "author": "Unknown",
     "image": "https://3kho.github.io/projects/defend-the-tank/images/splash.jpg",
     "link": "https://3kho.github.io/projects/defend-the-tank",
     "description": "This is Defend the Tank"
@@ -128,6 +146,7 @@
   {
     "id": 19,
     "title": "Drive Mad",
+    "author": "Martin Magni",
     "image": "https://3kho.github.io/projects/drive-mad/logo.jpg",
     "link": "https://3kho.github.io/projects/drive-mad",
     "description": "This is Drive Mad"
