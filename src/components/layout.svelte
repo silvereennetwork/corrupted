@@ -11,7 +11,7 @@
   @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
   :global(body) {
-    background: #111111;
+    background: #222222;
     margin: 0;
     overflow-x: hidden;
     color: white;
