@@ -32,11 +32,13 @@
   });
 
   function refreshGame() {
+    if (confirm("WARNING: \n By clicking continue, you will reload the game and may loose game progress or game data.") == true) {
     let originalLink = game.link;
     game.link = '';
     setTimeout(() => {
       game.link = originalLink;
     }, 50);
+    }
   }
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
