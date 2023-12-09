@@ -16,7 +16,7 @@
   /**
    * @param {{ title: string; }} game
    */
-   $: visibleGames = games.filter(game => game.title.toLowerCase().includes(search.toLowerCase()));
+  $: visibleGames = games.filter((game) => game.title.toLowerCase().includes(search.toLowerCase()));
 </script>
 <Layout />
 
@@ -30,22 +30,24 @@
 </div>
 
 <div id="searchBox" class="mt-20 mb-5">
-  <input bind:value={search} placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
+  <input bind:value="{search}" placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
 </div>
 
 <!-- TODO: add tags at some point -->
-<div class="game-card-container p-5 m-5 flex flex-wrap justify-start">
+<div class="game-card-container p-5 m-5 flex flex-wrap justify-center">
   {#each visibleGames as game (game.id)}
-  <div class="game-card mx-auto bg-gray-800 text-white rounded-xl shadow-md overflow-hidden m-3 flex flex-col items-center w-64">
-    <div class="pt-1">
-      <h2 class="tracking-wide text-2xl text-indigo-300 font-semibold">{game.title}</h2>
+  <a href={`/play/${game.id}`} title="link" class="m-3 flex flex-col">
+    <div class="game-card mx-auto bg-gray-800 text-white rounded-xl shadow-md overflow-hidden flex flex-col items-center w-64">
+      <div class="pt-1">
+        <h2 class="tracking-wide text-2xl text-indigo-300 font-semibold">{game.title}</h2>
+      </div>
+      <div class="my-0">
+        <img class="h-48 w-48 rounded-md object-cover m-2" src="{game.image}" alt="{game.title}" />
+      </div>
+      <div class="p-2">
+        <p class="text-gray-300">{game.description}</p>
+      </div>
     </div>
-    <div class="my-0">
-      <img class="h-48 w-48 rounded-md object-cover m-2" src="{game.image}" alt="{game.title}" />
-    </div>
-    <div class="p-2">
-      <p class="text-gray-300">{game.description}</p>
-    </div>
-  </div>
+  </a>
   {/each}
 </div>
