@@ -16,7 +16,7 @@
   /**
    * @param {{ title: string; }} game
    */
-   $: visibleGames = games.filter(game => game.title.toLowerCase().includes(search.toLowerCase()));
+  $: visibleGames = games.filter((game) => game.title.toLowerCase().includes(search.toLowerCase()));
 </script>
 <Layout />
 
@@ -30,7 +30,7 @@
 </div>
 
 <div id="searchBox" class="mt-20 mb-5">
-  <input bind:value={search} placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
+  <input bind:value="{search}" placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
 </div>
 
 <!-- TODO: add tags at some point -->
