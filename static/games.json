@@ -5,7 +5,13 @@
     "author": "Nintendo",
     "image": "/games/super-mario-3.webp",
     "link": "/gamelib/supermario3/index.html",
-    "description": "Its Mario!"
+    "description": "Its Mario!",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/super-mario-3.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 2,
@@ -13,7 +19,13 @@
     "author": "Rockstar Games",
     "image": "/games/gta.webp",
     "link": "/gamelib/gta-advance/index.html",
-    "description": "GTA is a fun roleplay game"
+    "description": "GTA is a fun roleplay game",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/gta.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 3,
@@ -21,7 +33,13 @@
     "author": "Game Freak, Nintendo",
     "image": "/games/pokemon-ruby.webp",
     "link": "/gamelib/ruby/index.html",
-    "description": "The Pokemon Ruby version."
+    "description": "The Pokemon Ruby version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-ruby.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 4,
@@ -29,7 +47,13 @@
     "author": "Game Freak, Nintendo",
     "image": "/games/pokemon-emerald.webp",
     "link": "/gamelib/emerald/index.html",
-    "description": "The Pokemon Emerald version."
+    "description": "The Pokemon Emerald version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-emerald.webp",
+      "AdUrl": "https://silvereen.net"
+    }
   },
   {
     "id": 5,
@@ -37,7 +61,13 @@
     "author": "Game Freak, Nintendo",
     "image": "/games/pokemon-sapphire.webp",
     "link": "/gamelib/sapphire/index.html",
-    "description": "The Pokemon Sapphire version."
+    "description": "The Pokemon Sapphire version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-sapphire.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 6,
@@ -45,7 +75,13 @@
     "author": "Game Freak, Nintendo",
     "image": "/games/pokemon-ultraviolet.webp",
     "link": "/gamelib/ultraviolet/index.html",
-    "description": "The Pokemon Ultraviolet version."
+    "description": "The Pokemon Ultraviolet version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-ultraviolet.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 7,
@@ -53,7 +89,13 @@
     "author": "Midway",
     "image": "/games/mka.webp",
     "link": "/gamelib/mka/index.html",
-    "description": "A action packed combat game."
+    "description": "A action packed combat game.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/mka.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 8,
@@ -61,7 +103,13 @@
     "author": "SEGA, The Sonic Team",
     "image": "/games/sonic-advance.webp",
     "link": "/gamelib/sonic/index.html",
-    "description": "A fun exploration game"
+    "description": "A fun exploration game",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/sonic-advance.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 10,
@@ -69,7 +117,13 @@
     "author": "Nintendo",
     "image": "/games/super-mario.webp",
     "link": "/gamelib/supermario/index.html",
-    "description": "A fun platformer."
+    "description": "A fun platformer.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/super-mario.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 11,
@@ -77,7 +131,13 @@
     "author": "Nintendo",
     "image": "/games/mario-kart.webp",
     "link": "/gamelib/mariokart/index.html",
-    "description": "A action filled racer."
+    "description": "A action filled racer.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/mario-kart.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 12,
@@ -85,6 +145,12 @@
     "author": "Nintendo",
     "image": "/games/super-mario-advance.webp",
     "link": "/gamelib/marioadvance/index.html",
-    "description": "A fun Mario platformer."
+    "description": "A fun Mario platformer.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/super-mario-advance.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   }
 ]
