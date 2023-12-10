@@ -150,5 +150,13 @@
     "image": "https://3kho.github.io/projects/drive-mad/logo.jpg",
     "link": "https://3kho.github.io/projects/drive-mad",
     "description": "This is Drive Mad"
+  },
+  {
+    "id": 20,
+    "title": "Super Mario 3",
+    "author": "Silvereen Games LLC",
+    "image": "/games/super-mario-3.webp",
+    "link": "/gamelib/pokemon3/index.html",
+    "description": "Just another test"
   }
 ]
