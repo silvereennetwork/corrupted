@@ -78,5 +78,13 @@
     "image": "/games/mario-kart.webp",
     "link": "/gamelib/mariokart/index.html",
     "description": "A action filled racer."
+  },
+  {
+    "id": 12,
+    "title": "Super Mario Advance",
+    "author": "Nintendo",
+    "image": "/games/super-mario-advance.webp",
+    "link": "/gamelib/marioadvance/index.html",
+    "description": "A fun Mario platformer."
   }
 ]
