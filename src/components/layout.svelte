@@ -10,7 +10,7 @@
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
-  :global(body) {
+  /*:global(body) {
     background: #111111;
     margin: 0;
     overflow-x: hidden;
@@ -27,7 +27,7 @@
     bottom: -50%;
     width: 200%;
     height: 200vh;
-    background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    background: transparent url("/img/noise-transparent.png") repeat 0 0;
     background-repeat: repeat;
     animation: bg-animation 0.2s infinite;
     opacity: 0.9;
@@ -70,4 +70,21 @@
       transform: translate(5%, 0);
     }
   }
+*/
+
+:global(body) {
+    margin: 0;
+    overflow-x: hidden;
+    color: white;
+    font-family: "Fira Sans", sans-serif;
+background: 
+    repeating-radial-gradient(#000 0 0.0001%,#1a1a1a 0 0.0002%) 50% 0/2500px 2500px,
+    repeating-conic-gradient(#000 0 0.0001%,#1a1a1a 0 0.0002%) 60% 60%/2500px 2500px;
+  background-blend-mode: difference;
+  animation: b .2s infinite alternate;
+  }
+
+@keyframes b{
+  100% {background-position: 50% 0, 60% 50%}
+}
 </style>

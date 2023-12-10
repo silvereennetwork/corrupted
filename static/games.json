@@ -1,135 +1,156 @@
 [
   {
     "id": 1,
-    "title": "2048",
-    "image": "/games/2048.png",
-    "link": "/games/2048.html",
-    "description": "This is 2048"
+    "title": "Super Mario 3",
+    "author": "Nintendo",
+    "image": "/games/super-mario-3.webp",
+    "link": "/gamelib/supermario3/index.html",
+    "description": "Its Mario!",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/super-mario-3.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 2,
-    "title": "Slope",
-    "image": "/games/slope.jpg",
-    "link": "/games/slope.html",
-    "description": "This is Slope"
+    "title": "Grand Theft Auto",
+    "author": "Rockstar Games",
+    "image": "/games/gta.webp",
+    "link": "/gamelib/gta-advance/index.html",
+    "description": "GTA is a fun roleplay game",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/gta.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 3,
-    "title": "Tunnel Rush",
-    "image": "/games/tunnel-rush.jpg",
-    "link": "/games/tunnel-rush.html",
-    "description": "This is Tunnel Rush"
+    "title": "Pokemon Ruby",
+    "author": "Game Freak, Nintendo",
+    "image": "/games/pokemon-ruby.webp",
+    "link": "/gamelib/ruby/index.html",
+    "description": "The Pokemon Ruby version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-ruby.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 4,
-    "title": "1v1.LOL",
-    "image": "https://3kho.github.io/projects/1v1lol/splash.png",
-    "link": "https://3kho.github.io/projects/1v1lol/",
-    "description": "This is 1v1.LOL"
+    "title": "Pokemon Emerald",
+    "author": "Game Freak, Nintendo",
+    "image": "/games/pokemon-emerald.webp",
+    "link": "/gamelib/emerald/index.html",
+    "description": "The Pokemon Emerald version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-emerald.webp",
+      "AdUrl": "https://silvereen.net"
+    }
   },
   {
     "id": 5,
-    "title": "Among Us",
-    "image": "https://3kho.github.io/projects/among-us/red.png",
-    "link": "https://3kho.github.io/projects/among-us",
-    "description": "This is Among Us"
+    "title": "Pokemon Sapphire",
+    "author": "Game Freak, Nintendo",
+    "image": "/games/pokemon-sapphire.webp",
+    "link": "/gamelib/sapphire/index.html",
+    "description": "The Pokemon Sapphire version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-sapphire.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 6,
-    "title": "Basketball Stars",
-    "image": "https://3kho.github.io/projects/basketball-stars/assets/images/basketball-stars.png",
-    "link": "https://3kho.github.io/projects/basketball-stars",
-    "description": "This is Basketball Stars"
+    "title": "Pokemon Ultraviolet",
+    "author": "Game Freak, Nintendo",
+    "image": "/games/pokemon-ultraviolet.webp",
+    "link": "/gamelib/ultraviolet/index.html",
+    "description": "The Pokemon Ultraviolet version.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pokemon-ultraviolet.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 7,
-    "title": "BitLife",
-    "image": "https://3kho.github.io/projects/bitlife/logo.png",
-    "link": "https://3kho.github.io/projects/bitlife",
-    "description": "This is BitLife"
+    "title": "Mortal Combat",
+    "author": "Midway",
+    "image": "/games/mka.webp",
+    "link": "/gamelib/mka/index.html",
+    "description": "A action packed combat game.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/mka.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 8,
-    "title": "Boxing Random",
-    "image": "https://3kho.github.io/projects/boxing-random/512x512.jpg",
-    "link": "https://3kho.github.io/projects/boxing-random",
-    "description": "This is Boxing Random"
-  },
-  {
-    "id": 9,
-    "title": "Cannon Basketball 4",
-    "image": "https://3kho.github.io/projects/cannon-basketball-4/img/splash.png",
-    "link": "https://3kho.github.io/projects/cannon-basketball-4",
-    "description": "This is Cannon Basketball 4"
+    "title": "Sonic Advance",
+    "author": "SEGA, The Sonic Team",
+    "image": "/games/sonic-advance.webp",
+    "link": "/gamelib/sonic/index.html",
+    "description": "A fun exploration game",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/sonic-advance.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 10,
-    "title": "Cell Machine",
-    "image": "https://3kho.github.io/projects/cell-machine/img/te9nDu.png",
-    "link": "https://3kho.github.io/projects/cell-machine",
-    "description": "This is Cell Machine"
+    "title": "Super Mario",
+    "author": "Nintendo",
+    "image": "/games/super-mario.webp",
+    "link": "/gamelib/supermario/index.html",
+    "description": "A fun platformer.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/super-mario.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 11,
-    "title": "Cluster Rush",
-    "image": "https://3kho.github.io/projects/cluster-rush/splash.png",
-    "link": "https://3kho.github.io/projects/cluster-rush",
-    "description": "This is Cluster Rush"
+    "title": "Mario Kart",
+    "author": "Nintendo",
+    "image": "/games/mario-kart.webp",
+    "link": "/gamelib/mariokart/index.html",
+    "description": "A action filled racer.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/mario-kart.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   },
   {
     "id": 12,
-    "title": "Cookie Clicker",
-    "image": "https://3kho.github.io/projects/cookie-clicker/cookie1.jpeg",
-    "link": "https://3kho.github.io/projects/cookie-clicker",
-    "description": "This is Cookie Clicker"
-  },
-  {
-    "id": 13,
-    "title": "Core Ball",
-    "image": "https://3kho.github.io/projects/core-ball/pr_source.png",
-    "link": "https://3kho.github.io/projects/core-ball",
-    "description": "This is Core Ball"
-  },
-  {
-    "id": 14,
-    "title": "Crossy Road",
-    "image": "https://3kho.github.io/projects/crossyroad/crossyroad.png",
-    "link": "https://3kho.github.io/projects/crossyroad",
-    "description": "This is Crossy Road"
-  },
-  {
-    "id": 15,
-    "title": "Cut the Rope",
-    "image": "https://3kho.github.io/projects/ctr/logo.png",
-    "link": "https://3kho.github.io/projects/ctr",
-    "description": "This is Cut the Rope"
-  },
-  {
-    "id": 16,
-    "title": "Cubefield",
-    "image": "https://3kho.github.io/projects/cubefield/assets/unnamed.png",
-    "link": "https://3kho.github.io/projects/cubefield",
-    "description": "This is Cubefield"
-  },
-  {
-    "id": 17,
-    "title": "Death Run 3D",
-    "image": "https://3kho.github.io/projects/death-run-3d/img/death.png",
-    "link": "https://3kho.github.io/projects/death-run-3d",
-    "description": "This is Death Run 3D"
-  },
-  {
-    "id": 18,
-    "title": "Defend the Tank",
-    "image": "https://3kho.github.io/projects/defend-the-tank/images/splash.jpg",
-    "link": "https://3kho.github.io/projects/defend-the-tank",
-    "description": "This is Defend the Tank"
-  },
-  {
-    "id": 19,
-    "title": "Drive Mad",
-    "image": "https://3kho.github.io/projects/drive-mad/logo.jpg",
-    "link": "https://3kho.github.io/projects/drive-mad",
-    "description": "This is Drive Mad"
+    "title": "Super Mario Advance",
+    "author": "Nintendo",
+    "image": "/games/super-mario-advance.webp",
+    "link": "/gamelib/marioadvance/index.html",
+    "description": "A fun Mario platformer.",
+    "EJSconfig": {
+      "core": "gba",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/super-mario-advance.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   }
 ]
