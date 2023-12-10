@@ -1,5 +1,6 @@
 <script>
   import Layout from "../../components/layout.svelte";
+  import Footer from "../../components/footer.svelte";
   import { onMount } from "svelte";
 
   /**
@@ -20,6 +21,15 @@
    */
   $: visibleGames = games.filter((game) => game.title.toLowerCase().includes(search.toLowerCase()));
 </script>
+<style>
+  .xpand {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  .xpand:hover {
+    transform: scale(1.05);
+  }
+</style>
 <Layout />
 
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
@@ -55,7 +65,7 @@
 <!-- TODO: add tags at some point -->
 <div class="game-card-container p-5 m-5 flex flex-wrap justify-center">
   {#each visibleGames as game (game.id)}
-  <a href={`/play/${game.id}`} title="link" class="m-3 flex flex-col">
+  <a href={`/play/${game.id}`} title="link" class="m-3 flex flex-col xpand">
     <div class="game-card mx-auto bg-gray-800 text-white rounded-xl shadow-md overflow-hidden flex flex-col items-center w-64">
       <div class="pt-1">
         <h2 class="tracking-wide text-2xl text-indigo-300 font-semibold">{game.title}</h2>
@@ -71,3 +81,5 @@
   {/each}
 </div>
 {/if}
+
+<Footer />
