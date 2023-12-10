@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import html2canvas from 'html2canvas';
   import { page } from "$app/stores";
   import Layout from "../../../components/layout.svelte";
   import Footer from "../../../components/footer.svelte";
@@ -20,7 +21,6 @@
         return;
       }
       const games = await response.json();
-      console.debug("games:", games);
       game = games.find(g => g.id === id);
       if (!game) {
         console.error("No game found with id:", id);
@@ -40,6 +40,16 @@
       game.link = originalLink;
     }, 50);
     }
+  }
+
+  async function takeScreenshot() {
+    const canvas = await html2canvas(document.body);
+    const img = canvas.toDataURL("image/png");
+    // Do something with the image data, like download it
+    const link = document.createElement('a');
+    link.download = 'screenshot.png';
+    link.href = img;
+    link.click();
   }
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -66,10 +76,10 @@
         <span class="game-creator text-gray-300 text-lg">By {game.author}</span>
       </div>
       <div class="icons flex gap-4">
-        <i class="fas fa-camera text-white text-lg cursor-pointer" on:click={() => console.log('Screenshot button clicked')} on:keydown={() => {}} title="Screenshot"></i>
-        <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" on:click={() => window.open(game.link)} on:keydown={() => {}} title="Open in new tab"></i>
-        <i class="fas fa-expand text-white text-lg cursor-pointer" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}} title="Fullscreen"></i>
-        <i class="fas fa-sync-alt text-white text-lg cursor-pointer" on:click={refreshGame} on:keydown={() => {}} title="Reload"></i>
+        <i class="fas fa-camera text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={takeScreenshot} on:keydown={() => {}} title="Screenshot"></i>
+        <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => window.open(game.link)} on:keydown={() => {}} title="Open in new tab"></i>
+        <i class="fas fa-expand text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}} title="Fullscreen"></i>
+        <i class="fas fa-sync-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={refreshGame} on:keydown={() => {}} title="Reload"></i>
       </div>
     </div>
     {:else}
