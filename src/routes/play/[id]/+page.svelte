@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { page } from "$app/stores";
   import Layout from "../../../components/layout.svelte";
+  import Footer from "../../../components/footer.svelte";
   export const data: any = null;
 
   let game = {};
@@ -88,3 +89,5 @@
     {/if}
   </div>
 </div>
+
+<Footer />
