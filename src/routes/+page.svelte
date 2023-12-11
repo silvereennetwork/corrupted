@@ -1,6 +1,7 @@
 <script>
   import Layout from "../components/layout.svelte";
   import Footer from "../components/footer.svelte";
+  import Alerts from "../components/alerts.svelte";
   import { onMount } from "svelte";
   onMount(() => {
     document.title = "Corrupted";
@@ -54,5 +55,5 @@
     <img src="/games/tunnel-rush.jpg" class="w-48 h-48 inline-block ml-10 rounded-md cursor-pointer hover:opacity-75" alt="slope" />
   </div>
 </div>
-
+<Alerts />
 <Footer />
