@@ -13,7 +13,7 @@
   }
 </script>
 
-<button on:click={() => showToast('This is an info message that is kinda long but is cool!')}>Show Info Toast</button>
+<!--<button on:click={() => showToast('This is an info message that is kinda long but is cool!')}>Show Info Toast</button>-->
 
 <div class="fixed bottom-0 right-0 p-6 space-y-4">
   {#each toasts as toast (toast.id)}
