@@ -64,7 +64,7 @@
   </a>
 </div>
 
-<div class="flex justify-center items-center h-screen bg-gray-800">
+<div class="flex justify-center items-center h-screen">
   <div class="w-4/5 mx-auto">
     {#if game.title}
     <div class="game-frame border border-black overflow-hidden mb-2 rounded-md">
