@@ -4,6 +4,8 @@
   import Alerts from "../../components/alerts.svelte";
   import { onMount } from "svelte";
 
+  var pagetitle = "Corrupted - Games"
+
   /**
    * @type {any[]}
    */
@@ -31,7 +33,6 @@
     transform: scale(1.05);
   }
 </style>
-<title>Corrupted - Games</title>
 <Layout />
 <Alerts />
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
