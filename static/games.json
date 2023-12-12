@@ -152,5 +152,19 @@
       "backgroundImage": "/games/super-mario-advance.webp",
       "AdUrl": "https://silvereen.net/"
     }
+  },
+  {
+    "id": 13,
+    "title": "Space Invaders",
+    "author": "Atari",
+    "image": "/games/space-invaders.webp",
+    "link": "/gamelib/spaceinvaders/index.html",
+    "description": "A fun Mario platformer.",
+    "EJSconfig": {
+      "core": "atari2600",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/space-invaders.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   }
 ]
