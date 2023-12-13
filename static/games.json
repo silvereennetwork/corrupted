@@ -152,5 +152,47 @@
       "backgroundImage": "/games/super-mario-advance.webp",
       "AdUrl": "https://silvereen.net/"
     }
+  },
+  {
+    "id": 13,
+    "title": "Space Invaders",
+    "author": "Atari",
+    "image": "/games/space-invaders.webp",
+    "link": "/gamelib/spaceinvaders/index.html",
+    "description": "A retro space shooter",
+    "EJSconfig": {
+      "core": "atari2600",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/space-invaders.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
+  },
+  {
+    "id": 14,
+    "title": "River Raid",
+    "author": "Atari",
+    "image": "/games/river-raid.webp",
+    "link": "/gamelib/riverraid/index.html",
+    "description": "Ride your way down the river.",
+    "EJSconfig": {
+      "core": "atari2600",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/river-raid.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
+  },
+  {
+    "id": 15,
+    "title": "Pacman",
+    "author": "Atari",
+    "image": "/games/pacman.webp",
+    "link": "/gamelib/pacman/index.html",
+    "description": "It's Pacman.",
+    "EJSconfig": {
+      "core": "atari2600",
+      "gameUrl": "game.zip",
+      "backgroundImage": "/games/pacman.webp",
+      "AdUrl": "https://silvereen.net/"
+    }
   }
 ]
