@@ -37,24 +37,22 @@
 </div>
 
 <div class="flex flex-col items-center justify-center">
-  <img src="../../corrupted-text.png" alt="logo" class="w-full sm:w-1/2 pt-20 mx-auto logo" />
+  <img src="../../corrupted-text.png" alt="logo" class="w-1/2 pt-20 mx-auto logo" />
   <a href="/play"><button class="mx-auto w-44 h-16 text-2xl cursor-pointer bg-white text-black rounded-md duration-150 hover:opacity-75">Let's Play!</button></a>
 </div>
 
-<div class="p-16">
-  <video src="/example.mp4" class="w-full sm:float-right sm:w-1/2 inline-block rounded-md m-4" autoplay loop muted></video>
+<div class="ml-4 p-24">
+  <video src="/example.mp4" class="float-right w-1/2 inline-block rounded-md" autoplay loop muted></video>
   <div class="xpand overflow-hidden rounded-md">
-    <div class="text-section sm:mr-4">
-      <h1 class="text-left text-4xl p-2">What is Corrupted?</h1>
-      <p class="text-left text-xl">
-        Corrupted is a website where you can play many games from retro-style games to flash games. We have the ultimate game library for retro-style games and games you can not play anywhere else online. Lets get playing!
-      </p>
-    </div>
-  </div>
-  <div class="image-section grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-    <img src="/games/slope.jpg" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
-    <img src="/games/2048.png" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
-    <img src="/games/tunnel-rush.jpg" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
+    <h1 class="text-left text-4xl inline-block">What is Corrupted?</h1>
+    <br />
+    <p class="text-left w-1/2 text-xl inline-block">
+      Corrupted is a website where you can play many games from retro-style games to flash games. We have the ultamate game library for retro-style games and games you can not play anywhere else online. Lets get playing!
+    </p>
+    <div class="w-1/3 h-10"></div>
+    <img src="/games/slope.jpg" class="w-48 h-48 inline-block ml-10 rounded-md cursor-pointer hover:opacity-75" alt="slope" />
+    <img src="/games/2048.png" class="w-48 h-48 inline-block ml-10 rounded-md cursor-pointer hover:opacity-75" alt="slope" />
+    <img src="/games/tunnel-rush.jpg" class="w-48 h-48 inline-block ml-10 rounded-md cursor-pointer hover:opacity-75" alt="slope" />
   </div>
 </div>
 <Alerts />
