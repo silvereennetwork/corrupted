@@ -24,6 +24,7 @@
   },
   "type": "module",
   "dependencies": {
-    "html2canvas": "^1.4.1"
+    "html2canvas": "^1.4.1",
+    "prettier-plugin-tailwindcss": "^0.5.9"
   }
 }
