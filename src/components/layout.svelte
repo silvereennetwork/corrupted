@@ -2,6 +2,11 @@
   import "../app.css";
   var pagetitle = "Corrupted";
 </script>
+<meta content="Corrupted - {pagetitle}" property="og:title" />
+<meta content="Feel the nostalgia by playing all the retros in one place." property="og:description" />
+<meta content="https://corruptedgaming.online/" property="og:url" />
+<meta content="https://corruptedgaming.online/corrupted-logo.png" property="og:image" />
+<meta content="#1f2937" data-react-helmet="true" name="theme-color" />
 <title>{pagetitle}</title>
 <slot />
 <div class="bg"></div>

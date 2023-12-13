@@ -4,6 +4,8 @@
   import Alerts from "../../components/alerts.svelte";
   import { onMount } from "svelte";
 
+  var pagetitle = "Corrupted - Games"
+
   /**
    * @type {any[]}
    */
