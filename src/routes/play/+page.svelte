@@ -33,7 +33,8 @@
 </style>
 <Layout />
 <Alerts />
-<div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
+
+<div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3 z-10">
   <a class="duration-150 hover:opacity-25 flex items-center" href="/">
     <span>Home</span>
   </a>
