@@ -52,9 +52,9 @@
     </div>
   </div>
   <div class="image-section grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-    <img src="/games/slope.jpg" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
-    <img src="/games/2048.png" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
-    <img src="/games/tunnel-rush.jpg" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
+    <a href="/play/10"><img src="/games/super-mario.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
+    <a href="/play/11"><img src="/games/mario-kart.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
+    <a href="/play/3"><img src="/games/pokemon-ruby.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
   </div>
 </div>
 <Alerts />
