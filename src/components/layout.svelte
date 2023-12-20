@@ -1,7 +1,6 @@
 <script>
   import "../app.css";
   var pagetitle = "Corrupted";
-  import Ads from "./ads.svelte"
 </script>
 <meta content="Corrupted - {pagetitle}" property="og:title" />
 <meta content="Feel the nostalgia by playing all the retros in one place." property="og:description" />
@@ -10,7 +9,6 @@
 <meta content="#1f2937" data-react-helmet="true" name="theme-color" />
 <title>{pagetitle}</title>
 <slot />
-<Ads />
 <div class="bg"></div>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
