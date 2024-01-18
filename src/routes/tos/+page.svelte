@@ -9,6 +9,16 @@
 
 <Layout />
 
+<!-- Navigation bar -->
+<div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
+  <a class="duration-150 hover:opacity-25 flex items-center" href="/">
+    <span>Home</span>
+  </a>
+  <a class="duration-150 hover:opacity-25 flex items-center" href="/play">
+    <span>Games</span>
+  </a>
+</div>
+
 <div class="flex flex-col items-center justify-center">
   <img src="../../corrupted-text.png" alt="logo" class="w-full sm:w-1/2 pt-10 mx-auto logo" />
   <h1 class="text-4xl p-2">Terms of Service for Corrupted</h1>
