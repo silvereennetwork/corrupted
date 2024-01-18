@@ -47,7 +47,7 @@
     <div class="text-section sm:mr-4">
       <h1 class="text-left text-4xl p-2">What is Corrupted?</h1>
       <p class="text-left text-xl">
-        Corrupted is a website where you can play many games from retro-style games to flash games. We have the ultimate game library for retro-style games and games you can not play anywhere else online. Lets get playing!
+        Corrupted is a website where you can play many retro-style games and flash games. We have the ultimate game library for retro-style games and games you can not play anywhere else online. Let's get playing!
       </p>
     </div>
   </div>
