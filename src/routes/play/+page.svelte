@@ -30,7 +30,8 @@
 
   /**
    * Filter visible games based on the search input
-   * @param {{ title: string; }} game
+   * @param {{ title: string; }} game - The game object to be filtered
+   * @returns {any[]} - The filtered list of games
    */
   $: visibleGames = games.filter((game) => game.title.toLowerCase().includes(search.toLowerCase()));
 </script>
@@ -96,8 +97,13 @@
       <div class="my-0">
         <img class="h-48 w-48 rounded-md object-cover m-2" src="{game.image}" alt="{game.title}" />
       </div>
-      <div class="p-2">
-        <p class="text-gray-300">{game.description}</p>
+      <div class="p-2 overflow-x-auto" style="white-space: nowrap; overflow-x: scroll;">
+        {#each game.tags as tag}
+        <div class="inline-flex items-center justify-center">
+          <span class="text-white text-sm mr-1 bg-indigo-600 rounded-lg px-2 py-1">{tag}</span>
+        </div>
+        {/each}
+        <p class="text-gray-300 text-center">{game.description}</p>
       </div>
     </div>
   </a>

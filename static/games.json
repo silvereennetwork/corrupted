@@ -6,6 +6,7 @@
     "image": "/games/super-mario-3.webp",
     "link": "/gamelib/supermario3/index.html",
     "description": "Its Mario!",
+    "tags": ["Mario", "Nintendo", "Platformer"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -20,6 +21,7 @@
     "image": "/games/gta.webp",
     "link": "/gamelib/gta-advance/index.html",
     "description": "GTA is a fun roleplay game",
+    "tags": ["GTA", "Rockstar Games", "Roleplay"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -34,6 +36,7 @@
     "image": "/games/pokemon-ruby.webp",
     "link": "/gamelib/ruby/index.html",
     "description": "The Pokemon Ruby version.",
+    "tags": ["Pokemon", "Game Freak", "Nintendo"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -48,6 +51,7 @@
     "image": "/games/pokemon-emerald.webp",
     "link": "/gamelib/emerald/index.html",
     "description": "The Pokemon Emerald version.",
+    "tags": ["Pokemon", "Game Freak", "Nintendo"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -62,6 +66,7 @@
     "image": "/games/pokemon-sapphire.webp",
     "link": "/gamelib/sapphire/index.html",
     "description": "The Pokemon Sapphire version.",
+    "tags": ["Pokemon", "Game Freak", "Nintendo"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -76,6 +81,7 @@
     "image": "/games/pokemon-ultraviolet.webp",
     "link": "/gamelib/ultraviolet/index.html",
     "description": "The Pokemon Ultraviolet version.",
+    "tags": ["Pokemon", "Game Freak", "Nintendo"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -90,6 +96,7 @@
     "image": "/games/mka.webp",
     "link": "/gamelib/mka/index.html",
     "description": "A action packed combat game.",
+    "tags": ["Action", "Combat", "Midway"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -104,6 +111,7 @@
     "image": "/games/sonic-advance.webp",
     "link": "/gamelib/sonic/index.html",
     "description": "A fun exploration game",
+    "tags": ["Sonic", "SEGA", "Exploration"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -118,6 +126,7 @@
     "image": "/games/super-mario.webp",
     "link": "/gamelib/supermario/index.html",
     "description": "A fun platformer.",
+    "tags": ["Mario", "Nintendo", "Platformer"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -132,6 +141,7 @@
     "image": "/games/mario-kart.webp",
     "link": "/gamelib/mariokart/index.html",
     "description": "A action filled racer.",
+    "tags": ["Mario", "Nintendo", "Racing"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -146,6 +156,7 @@
     "image": "/games/super-mario-advance.webp",
     "link": "/gamelib/marioadvance/index.html",
     "description": "A fun Mario platformer.",
+    "tags": ["Mario", "Nintendo", "Platformer"],
     "EJSconfig": {
       "core": "gba",
       "gameUrl": "game.zip",
@@ -160,6 +171,7 @@
     "image": "/games/space-invaders.webp",
     "link": "/gamelib/spaceinvaders/index.html",
     "description": "A retro space shooter",
+    "tags": ["Retro", "Atari", "Space Shooter"],
     "EJSconfig": {
       "core": "atari2600",
       "gameUrl": "game.zip",
@@ -174,6 +186,7 @@
     "image": "/games/river-raid.webp",
     "link": "/gamelib/riverraid/index.html",
     "description": "Ride your way down the river.",
+    "tags": ["Atari", "River", "Shooter"],
     "EJSconfig": {
       "core": "atari2600",
       "gameUrl": "game.zip",
@@ -188,6 +201,7 @@
     "image": "/games/pacman.webp",
     "link": "/gamelib/pacman/index.html",
     "description": "It's Pacman.",
+    "tags": ["Atari", "Pacman"],
     "EJSconfig": {
       "core": "atari2600",
       "gameUrl": "game.zip",

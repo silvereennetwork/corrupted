@@ -8,36 +8,33 @@
   import Layout from "../../../components/layout.svelte";
   import Footer from "../../../components/footer.svelte";
 
-  // Define data variable (if any)
   export const data: any = null;
-
-  // Initialize game object
   let game = {};
 
-  // Lifecycle hook: Runs after the component is first added to the DOM
   onMount(async () => {
-    console.debug("onMount");
     try {
-      // Extract parameters from the route
+      // get the game id from the url
       const { params } = $page;
-      console.debug("params:", params);
       const id = Number(params.id);
 
-      // Fetch games data from the server
+      // fetch the games data
       const response = await fetch("/games.json");
       
-      // Check if the response is successful
+      // response check
       if (!response.ok) {
         console.error("Failed to fetch games.json:", response.status, response.statusText);
         game = { title: 'Failed to fetch games', description: '', link: '' };
         return;
       }
 
-      // Parse JSON
+      // parse data
       const games = await response.json();
 
-      // Find the game with the given id
+      // find the game with the given id
       game = games.find(g => g.id === id);
+      document.title = "Corrupted - " + game.title;
+      let tags = game.tags || []; // fetch tags
+      //console.debug(game); //turn off for prod
 
       // game not found
       if (!game) {
@@ -61,7 +58,8 @@
     }
   }
 
-  // Function to take a screenshot of the current page
+  // screenshot
+  // TODO: fix screenshot it broken :L
   async function takeScreenshot() {
     const canvas = await html2canvas(document.body);
     const img = canvas.toDataURL("image/png");
@@ -72,8 +70,6 @@
     link.href = img;
     link.click();
   }
-
-  var pagetitle = "Corrupted -" + game.title;
 </script>
 
 <!-- Font Awesome stylesheet -->
@@ -105,6 +101,13 @@
         <span class="game-title text-white text-lg">{game.title}</span>
         <span class="game-creator text-gray-300 text-lg">By {game.author}</span>
       </div>
+      <div class="game-info flex gap-4">
+        <div class="tags">
+          {#each game.tags as tag}
+          <span class="text-white text-sm mr-1 bg-indigo-500 rounded-lg px-2 py-1">{tag}</span>
+          {/each}
+        </div>
+      </div>
       <div class="icons flex gap-4">
         <!-- Buttons for taking a screenshot, opening in a new tab, going fullscreen, and reloading the game -->
         <i class="fas fa-camera text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={takeScreenshot} on:keydown={() => {}} title="Screenshot"></i>
@@ -125,7 +128,6 @@
         border-top-color: #3498db;
         animation: spin 0.7s linear infinite;
       }
-    
       @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
