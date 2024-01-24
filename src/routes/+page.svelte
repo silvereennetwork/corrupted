@@ -47,14 +47,14 @@
     <div class="text-section sm:mr-4">
       <h1 class="text-left text-4xl p-2">What is Corrupted?</h1>
       <p class="text-left text-xl">
-        Corrupted is a website where you can play many games from retro-style games to flash games. We have the ultimate game library for retro-style games and games you can not play anywhere else online. Lets get playing!
+        Corrupted is a website where you can play many retro-style games and flash games. We have the ultimate game library for retro-style games and games you can not play anywhere else online. Let's get playing!
       </p>
     </div>
   </div>
   <div class="image-section grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-    <img src="/games/slope.jpg" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
-    <img src="/games/2048.png" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
-    <img src="/games/tunnel-rush.jpg" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" />
+    <a href="/play/10"><img src="/games/super-mario.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
+    <a href="/play/11"><img src="/games/mario-kart.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
+    <a href="/play/3"><img src="/games/pokemon-ruby.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
   </div>
 </div>
 <Alerts />
