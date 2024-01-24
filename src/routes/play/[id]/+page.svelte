@@ -77,7 +77,7 @@
 <Layout />
 
 <!-- Navigation bar -->
-<div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
+<div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav  flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
   <a class="duration-150 hover:opacity-25 flex items-center" href="/">
     <span>Home</span>
   </a>
@@ -88,11 +88,11 @@
 
 <!-- Main content area -->
 <div class="flex justify-center items-center h-screen">
-  <div class="w-4/5 mx-auto">
+  <div class="w-4/5 mx-auto pt-[70px]">
     {#if game.title}
     <!-- Display the game frame if a game is found -->
     <div class="game-frame border border-black overflow-hidden mb-2 rounded-md">
-      <iframe title="Game Frame" src="{game.link}" width="100%" height="600px"></iframe>
+      <iframe title="Game Frame" class="z-10" src="{game.link}" width="100%" height="600px"></iframe>
     </div>
 
     <!-- Game information and menu bar -->
