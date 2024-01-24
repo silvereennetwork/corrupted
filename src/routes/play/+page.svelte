@@ -97,9 +97,11 @@
       <div class="my-0">
         <img class="h-48 w-48 rounded-md object-cover m-2" src="{game.image}" alt="{game.title}" />
       </div>
-      <div class="p-2 overflow-x-auto" style="white-space: nowrap; overflow-x: auto;">
+      <div class="p-2 overflow-x-auto" style="white-space: nowrap; overflow-x: scroll;">
         {#each game.tags as tag}
-          <span class="text-white text-sm mr-1 bg-gray-600 rounded-lg px-2 py-1">{tag}</span>
+        <div class="inline-flex items-center">
+          <span class="text-white text-sm mr-1 bg-indigo-600 rounded-lg px-2 py-1">{tag}</span>
+        </div>
         {/each}
         <p class="text-gray-300">{game.description}</p>
       </div>
