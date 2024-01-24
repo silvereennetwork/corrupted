@@ -45,6 +45,13 @@
   .xpand:hover {
     transform: scale(1.05);
   }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 </style>
 
 <!-- Include Svelte components -->
@@ -97,7 +104,7 @@
       <div class="my-0">
         <img class="h-48 w-48 rounded-md object-cover m-2" src="{game.image}" alt="{game.title}" />
       </div>
-      <div class="p-2 overflow-x-auto" style="white-space: nowrap; overflow-x: scroll;">
+      <div class="p-2 overflow-x-auto scrollbar-hide" style="white-space: nowrap; overflow-x: scroll;">
         {#each game.tags as tag}
         <div class="inline-flex items-center justify-center">
           <span class="text-white text-sm mr-1 bg-indigo-600 rounded-lg px-2 py-1">{tag}</span>
