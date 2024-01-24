@@ -99,11 +99,11 @@
       </div>
       <div class="p-2 overflow-x-auto" style="white-space: nowrap; overflow-x: scroll;">
         {#each game.tags as tag}
-        <div class="inline-flex items-center">
+        <div class="inline-flex items-center justify-center">
           <span class="text-white text-sm mr-1 bg-indigo-600 rounded-lg px-2 py-1">{tag}</span>
         </div>
         {/each}
-        <p class="text-gray-300">{game.description}</p>
+        <p class="text-gray-300 text-center">{game.description}</p>
       </div>
     </div>
   </a>
