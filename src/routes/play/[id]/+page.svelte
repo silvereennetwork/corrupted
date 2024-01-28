@@ -7,6 +7,7 @@
   // Import Svelte components
   import Layout from "../../../components/layout.svelte";
   import Footer from "../../../components/footer.svelte";
+  import games from '../../../games.json';
 
   export const data: any = null;
   let game = {};
@@ -18,17 +19,7 @@
       const id = Number(params.id);
 
       // fetch the games data
-      const response = await fetch("/src/games.json");
-      
-      // response check
-      if (!response.ok) {
-        console.error("Failed to fetch games.json:", response.status, response.statusText);
-        game = { title: 'Failed to fetch games', description: '', link: '' };
-        return;
-      }
-
-      // parse data
-      const games = await response.json();
+      const response = games
 
       // find the game with the given id
       game = games.find(g => g.id === id);
