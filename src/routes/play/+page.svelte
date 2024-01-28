@@ -10,7 +10,7 @@
    * @type {any[]}
    */
   let search = "";
-  let isLoading = true;
+  let isLoading = false;
 
   /**
    * Filter visible games based on the search input
