@@ -2,11 +2,25 @@
   import Layout from "../components/layout.svelte";
   import Footer from "../components/footer.svelte";
   import Alerts from "../components/alerts.svelte";
-  import partners from '../partners.json';
+  import partners from "../partners.json";
+  import games from '../games.json';
   import { onMount } from "svelte";
   onMount(() => {
     document.title = "Corrupted";
   });
+
+  // https://stackoverflow.com/a/2450976
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  // Shuffle the games and take the first three
+  shuffle(games);
+  const randomGames = games.slice(0, 3);
+  console.log(randomGames);
 </script>
 
 <style>
@@ -26,15 +40,18 @@
     transform: scale(1.05);
   }
   .carousel {
-  display: flex;
-  overflow: auto;
-  animation: scroll 30s linear infinite;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
+    display: flex;
+    overflow: auto;
+    animation: scroll 30s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 </style>
 <Layout />
 
@@ -63,9 +80,11 @@
     </div>
   </div>
   <div class="image-section grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-    <a href="/play/10"><img src="/games/super-mario.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
-    <a href="/play/11"><img src="/games/mario-kart.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
-    <a href="/play/3"><img src="/games/pokemon-ruby.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
+    {#each randomGames as game}
+      <a href={game.link}>
+        <img src={game.image} class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt={game.title} />
+      </a>
+    {/each}
   </div>
 </div>
 

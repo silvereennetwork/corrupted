@@ -18,7 +18,7 @@
       const id = Number(params.id);
 
       // fetch the games data
-      const response = await fetch("/games.json");
+      const response = await fetch("/src/games.json");
       
       // response check
       if (!response.ok) {

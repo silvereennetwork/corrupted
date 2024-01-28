@@ -19,7 +19,7 @@
   // Lifecycle hook: Runs after the component is first added to the DOM
   onMount(async () => {
     // Fetch games data from the server
-    const response = await fetch("/games.json");
+    const response = await fetch("/src/games.json");
 
     // Parse the JSON response and update the games variable
     games = await response.json();
