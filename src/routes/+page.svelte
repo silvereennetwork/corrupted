@@ -20,7 +20,6 @@
   // Shuffle the games and take the first three
   shuffle(games);
   const randomGames = games.slice(0, 3);
-  console.log(randomGames);
 </script>
 
 <style>
