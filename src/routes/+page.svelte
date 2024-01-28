@@ -2,10 +2,30 @@
   import Layout from "../components/layout.svelte";
   import Footer from "../components/footer.svelte";
   import Alerts from "../components/alerts.svelte";
+  import partners from "../partners.json";
   import { onMount } from "svelte";
-  onMount(() => {
+
+  let games = [];
+  let randomGames = [];
+
+  onMount(async () => {
+    const response = await fetch('/games.json');
+    games = await response.json();
+
+    // Shuffle the games and take the first three
+    shuffle(games);
+    randomGames = games.slice(0, 3);
+
     document.title = "Corrupted";
   });
+
+  // https://stackoverflow.com/a/2450976
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
 </script>
 
 <style>
@@ -23,6 +43,19 @@
   }
   .xpand:hover {
     transform: scale(1.05);
+  }
+  .carousel {
+    display: flex;
+    overflow: auto;
+    animation: scroll 30s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 </style>
 <Layout />
@@ -52,10 +85,26 @@
     </div>
   </div>
   <div class="image-section grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-    <a href="/play/10"><img src="/games/super-mario.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
-    <a href="/play/11"><img src="/games/mario-kart.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
-    <a href="/play/3"><img src="/games/pokemon-ruby.webp" class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt="slope" /></a>
+    {#each randomGames as game}
+      <a href={game.link}>
+        <img src={game.image} class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt={game.title} />
+      </a>
+    {/each}
   </div>
 </div>
+
+<h1 class="text-left text-4xl p-2">Partners</h1>
+
+<div class="carousel p-4 rounded-md">
+  {#each partners as partner}
+    <div class="partner flex flex-col items-center m-2 p-2 bg-gray-800 rounded-lg shadow-lg max-w-64">
+      <img class="w-24 h-24 object-cover rounded-lg mb-2" src={partner.icon} alt={partner.name} />
+      <h2 class="text-xl font-bold mb-1">{partner.name}</h2>
+      <p class="text-sm text-indigo-300 mb-2">{partner.description}</p>
+      <a class="text-blue-500 hover:text-blue-700 underline" href={partner.url}>Learn More</a>
+    </div>
+  {/each}
+</div>
+
 <Alerts />
 <Footer />

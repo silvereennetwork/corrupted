@@ -5,26 +5,17 @@
   import Alerts from "../../components/alerts.svelte";
   import { onMount } from "svelte";
 
-  // Set the page title
-  var pagetitle = "Corrupted - Games";
-
   /**
    * Define variables and their initial values
    * @type {any[]}
    */
-  let games = [];
   let search = "";
   let isLoading = true;
+  let games = [];
 
-  // Lifecycle hook: Runs after the component is first added to the DOM
   onMount(async () => {
-    // Fetch games data from the server
-    const response = await fetch("/games.json");
-
-    // Parse the JSON response and update the games variable
+    const response = await fetch('/games.json');
     games = await response.json();
-    
-    // Set isLoading to false after data is loaded
     isLoading = false;
   });
 
