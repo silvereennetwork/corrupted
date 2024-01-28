@@ -3,9 +3,19 @@
   import Footer from "../components/footer.svelte";
   import Alerts from "../components/alerts.svelte";
   import partners from "../partners.json";
-  import games from '../games.json';
   import { onMount } from "svelte";
-  onMount(() => {
+
+  let games = [];
+  let randomGames = [];
+
+  onMount(async () => {
+    const response = await fetch('/games.json');
+    games = await response.json();
+
+    // Shuffle the games and take the first three
+    shuffle(games);
+    randomGames = games.slice(0, 3);
+
     document.title = "Corrupted";
   });
 
@@ -16,10 +26,6 @@
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
-
-  // Shuffle the games and take the first three
-  shuffle(games);
-  const randomGames = games.slice(0, 3);
 </script>
 
 <style>

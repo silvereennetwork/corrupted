@@ -3,14 +3,21 @@
   import Layout from "../../components/layout.svelte";
   import Footer from "../../components/footer.svelte";
   import Alerts from "../../components/alerts.svelte";
-  import games from '../../games.json';
+  import { onMount } from "svelte";
 
   /**
    * Define variables and their initial values
    * @type {any[]}
    */
   let search = "";
-  let isLoading = false;
+  let isLoading = true;
+  let games = [];
+
+  onMount(async () => {
+    const response = await fetch('/games.json');
+    games = await response.json();
+    isLoading = false;
+  });
 
   /**
    * Filter visible games based on the search input

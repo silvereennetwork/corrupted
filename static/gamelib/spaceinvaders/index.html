@@ -5,7 +5,7 @@
   <script type="text/javascript">
     console.log("Loading EmulatorJS...");
     async function loadGameConfig() {
-      const response = await fetch("/src/games.json");
+      const response = await fetch("/games.json");
       const data = await response.json();
 
       const gameId = 13; // Replace with Game ID
