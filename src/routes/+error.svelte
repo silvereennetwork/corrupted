@@ -12,7 +12,7 @@
   /* styles override */
 </style>
 
-<Layout />
+<Layout pagetitle="404 Error" />
 
 <div class="flex flex-col h-screen justify-between">
   <div class="flex flex-col h-screen justify-between">

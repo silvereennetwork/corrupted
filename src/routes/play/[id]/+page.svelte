@@ -74,7 +74,7 @@
 
 <!-- Font Awesome stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<Layout />
+<Layout pagetitle={game.title} />
 
 <!-- Navigation bar -->
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav  flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
@@ -91,12 +91,12 @@
   <div class="w-4/5 mx-auto pt-[70px]">
     {#if game.title}
     <!-- Display the game frame if a game is found -->
-    <div class="game-frame border border-black overflow-hidden mb-2 rounded-md">
+    <div class="game-frame border border-black overflow-hidden mb-2 rounded-lg">
       <iframe title="Game Frame" class="z-10" src="{game.link}" width="100%" height="600px"></iframe>
     </div>
 
     <!-- Game information and menu bar -->
-    <div class="menu-bar bg-indigo-700 flex justify-between rounded-md items-center px-4 py-2">
+    <div class="menu-bar bg-indigo-700 flex justify-between rounded-lg items-center px-4 py-2">
       <div class="game-info flex gap-4">
         <span class="game-title text-white text-lg">{game.title}</span>
         <span class="game-creator text-gray-300 text-lg">By {game.author}</span>
