@@ -74,7 +74,7 @@
 
 <!-- Font Awesome stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<Layout {game.title as pagetitle} />
+<Layout pagetitle={game.title} />
 
 <!-- Navigation bar -->
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav  flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
