@@ -27,7 +27,7 @@
 </div>
 
 <div class="p-16">
-  <div class="xpand overflow-hidden rounded-md">
+  <div class="xpand overflow-hidden rounded-lg">
     <div class="text-section sm:mr-4">
       <h2 class="text-left text-xl p-2">1. Acceptance of Terms</h2>
       <p class="text-left text-md">

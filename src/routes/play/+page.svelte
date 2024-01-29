@@ -60,7 +60,7 @@
 </div>
 
 <!-- Search input box -->
-<div id="searchBox" class="mt-20 mb-5">
+<div id="searchBox" class="mx-20">
   <input bind:value="{search}" placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
 </div>
 
@@ -93,7 +93,7 @@
         <h2 class="tracking-wide text-2xl text-indigo-300 font-semibold">{game.title}</h2>
       </div>
       <div class="my-0">
-        <img class="h-48 w-48 rounded-md object-cover m-2" src="{game.image}" alt="{game.title}" />
+        <img class="h-48 w-48 rounded-lg object-cover m-2" src="{game.image}" alt="{game.title}" />
       </div>
       <div class="p-2 overflow-x-auto scrollbar-hide" style="white-space: nowrap; overflow-x: scroll;">
         {#each game.tags as tag}

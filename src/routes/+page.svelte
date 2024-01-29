@@ -71,12 +71,12 @@
 
 <div class="flex flex-col items-center justify-center">
   <img src="../../corrupted-text.png" alt="logo" class="w-full sm:w-1/2 pt-20 mx-auto logo" />
-  <a href="/play"><button class="mx-auto w-44 h-16 text-2xl cursor-pointer bg-white text-black rounded-md duration-150 hover:opacity-75">Let's Play!</button></a>
+  <a href="/play"><button class="mx-auto w-44 h-16 text-2xl cursor-pointer bg-white text-black rounded-lg duration-150 hover:opacity-75">Let's Play!</button></a>
 </div>
 
 <div class="p-16">
-  <video src="/example.mp4" class="w-full sm:float-right sm:w-1/2 inline-block rounded-md m-4" autoplay loop muted></video>
-  <div class="xpand overflow-hidden rounded-md">
+  <video src="/example.mp4" class="w-full sm:float-right sm:w-1/2 inline-block rounded-lg m-4" autoplay loop muted></video>
+  <div class="xpand overflow-hidden rounded-lg">
     <div class="text-section sm:mr-4">
       <h1 class="text-left text-4xl p-2">What is Corrupted?</h1>
       <p class="text-left text-xl">
@@ -84,10 +84,10 @@
       </p>
     </div>
   </div>
-  <div class="image-section grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+  <div class="image-section grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4 h-40">
     {#each randomGames as game}
       <a href={game.link}>
-        <img src={game.image} class="w-full h-auto rounded-md cursor-pointer duration-150 hover:opacity-75" alt={game.title} />
+        <img src={game.image} class="rounded-lg cursor-pointer duration-150 hover:opacity-75 h-40 w-40" alt={game.title} />
       </a>
     {/each}
   </div>
@@ -95,7 +95,7 @@
 
 <h1 class="text-left text-4xl p-2">Partners</h1>
 
-<div class="carousel p-4 rounded-md">
+<div class="carousel p-4 rounded-lg">
   {#each partners as partner}
     <div class="partner flex flex-col items-center m-2 p-2 bg-gray-800 rounded-lg shadow-lg max-w-64">
       <img class="w-24 h-24 object-cover rounded-lg mb-2" src={partner.icon} alt={partner.name} />
