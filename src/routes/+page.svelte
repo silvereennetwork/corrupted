@@ -15,8 +15,6 @@
     // Shuffle the games and take the first three
     shuffle(games);
     randomGames = games.slice(0, 3);
-
-    document.title = "Corrupted";
   });
 
   // https://stackoverflow.com/a/2450976
@@ -27,11 +25,6 @@
     }
   }
 </script>
-<meta content="Corrupted" property="og:title" />
-<meta content="Feel the nostalgia by playing all the retros in one place." property="og:description" />
-<meta content="https://corruptedgaming.online/" property="og:url" />
-<meta content="https://corruptedgaming.online/corrupted-logo.png" property="og:image" />
-<meta content="#1f2937" data-react-helmet="true" name="theme-color" />
 <style>
   .logo:hover {
     transform: scale(1.1);
@@ -62,7 +55,7 @@
     }
   }
 </style>
-<Layout />
+<Layout pagetitle="Home" />
 
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3 z-10">
   <a class="duration-150 hover:opacity-25 flex items-center" href="/">

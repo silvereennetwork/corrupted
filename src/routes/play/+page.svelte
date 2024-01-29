@@ -46,7 +46,7 @@
 </style>
 
 <!-- Include Svelte components -->
-<Layout />
+<Layout pagetitle="Games" />
 <Alerts />
 
 <!-- Navigation bar -->
