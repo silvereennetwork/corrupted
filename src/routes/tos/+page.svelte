@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
   onMount(() => {
     document.title = "Corrupted";
+    pagetitle = "Terms of service";
   });
 </script>
 
