@@ -3,7 +3,6 @@
   import Footer from "../../components/footer.svelte";
   import { onMount } from "svelte";
   onMount(() => {
-    document.title = "Corrupted";
     pagetitle = "Terms of service";
   });
 </script>
