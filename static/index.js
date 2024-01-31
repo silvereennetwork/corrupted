@@ -1,4 +1,4 @@
-console.log('Hello World')
+console.log('%cCorrupted', 'background-color: black; color: white; padding: 5px; border-radius: 25px; font-size: 30px; font-family: monospace; margin: 10px;');
 
 document.addEventListener('DOMContentLoaded', function() {
   var gaAds = document.createElement('script');
