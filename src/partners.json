@@ -1,27 +1,39 @@
 [
   {
-    "name": "Google",
-    "icon": "https://via.placeholder.com/150",
-    "description": "Google is our partner, fucking idiot hahah",
-    "url": "https://google.com"
+    "name": "Ehab Games",
+    "icon": "https://kazwire.com/assets/partners/ehab-games.png",
+    "description": "Unlock Hundreds of Games and Break Through Internet Barriers with our Built-in Proxy!",
+    "url": "https://ehabgames.com/"
   },
   {
-    "name": "I AM CRAZY",
-    "icon": "https://via.placeholder.com/150",
-    "description": "AAAAAAAAAAAAAAAAAAAA",
-    "url": "https://crazy.com"
+    "name": "WebLFG",
+    "icon": "https://kazwire.com/assets/partners/weblfg.png",
+    "description": "From internet classics to present-day favorites, it's online entertainment right at your fingertips.",
+    "url": "https://weblfg.com"
   },
   {
-    "name": "Ballsack corp",
-    "icon": "https://via.placeholder.com/150",
-    "description": "Ballsack is a goofy company focused on some stuff",
-    "url": "https://initech.com"
+    "name": "Moonlight",
+    "icon": "https://kazwire.com/assets/partners/moonlight.png",
+    "description": "Browse tons of fun games for free with Moonlight. The cure to boredom at your fingertips.",
+    "url": "https://kidscodinglive.com/"
   },
   {
-    "name": "blahaj",
-    "icon": "https://via.placeholder.com/150",
-    "description": "blahaj shark yes cool",
-    "url": "https://ikea.com"
+    "name": "Phantom Games",
+    "icon": "https://kazwire.com/assets/partners/phantom.png",
+    "description": "Where simplicity and unblocked fun collide!",
+    "url": "https://phantom.delusionz.xyz/"
+  },
+  {
+    "name": "Titanium Network",
+    "icon": "https://kazwire.com/assets/partners/TN.png",
+    "description": "Titanium Network is an organization dedicated to providing services related to bypassing internet censorship.",
+    "url": "https://titaniumnetwork.org/"
+  },
+  {
+    "name": "Totally Science",
+    "icon": "https://kazwire.com/assets/partners/ts.png",
+    "description": "Totally Science - your one-stop destination for free online games and unblocked content! Youtube, multiplayer games, Minecraft, and more.",
+    "url": "https://totallyscience.co/"
   },
   {
     "name": "three kay ach oh",
