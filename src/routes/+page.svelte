@@ -3,8 +3,6 @@
   import Footer from "../components/footer.svelte";
   import Alerts from "../components/alerts.svelte";
   import partners from "../partners.json";
-  import { Swiper, SwiperSlide } from 'svelte-swiper';
-  import 'swiper/swiper-bundle.css';
   import { onMount } from "svelte";
 
   let games = [];
@@ -42,6 +40,19 @@
   }
   .xpand:hover {
     transform: scale(1.05);
+  }
+  .carousel {
+    display: flex;
+    overflow: auto;
+    animation: scroll 30s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 </style>
 <Layout pagetitle="Home" />
@@ -81,29 +92,14 @@
 
 <h1 class="text-left text-4xl p-2">Partners</h1>
 
-<Swiper
-  spaceBetween={50}
-  slidesPerView={3}
-  navigation={true}
-  loop={true}
-  autoplay={{ delay: 5000 }}
-  class="mySwiper"
->
+<div class="carousel p-4 rounded-lg">
   {#each partners as partner}
-    <SwiperSlide>
-      <div class="flex flex-col items-center m-2 p-2 bg-gray-800 rounded-lg shadow-lg w-full h-screen/3">
-        <img class="w-24 h-24 object-cover rounded-lg mb-2" src={partner.icon} alt={partner.name} />
-        <h2 class="text-xl font-bold mb-1">{partner.name}</h2>
-        <p class="text-sm text-indigo-300 mb-2">{partner.description}</p>
-        <a class="text-blue-500 hover:text-blue-700 underline" href={partner.url}>Learn More</a>
-      </div>
-    </SwiperSlide>
-  {/each}
-</Swiper>
-
-<div class="flex justify-center space-x-2 mt-4">
-  {#each partners as partner, index}
-    <span class="block w-4 h-4 rounded-full bg-gray-400"></span>
+    <div class="partner flex flex-col items-center m-2 p-2 bg-gray-800 rounded-lg shadow-lg max-w-64">
+      <img class="w-24 h-24 object-cover rounded-lg mb-2" src={partner.icon} alt={partner.name} />
+      <h2 class="text-xl font-bold mb-1">{partner.name}</h2>
+      <p class="text-sm text-indigo-300 mb-2">{partner.description}</p>
+      <a class="text-blue-500 hover:text-blue-700 underline" href={partner.url}>Learn More</a>
+    </div>
   {/each}
 </div>
 
