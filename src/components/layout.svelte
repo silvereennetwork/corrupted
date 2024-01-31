@@ -1,6 +1,7 @@
 <script>
   import "../app.css";
   export let pagetitle = "";
+  import CookieConsent from './cookieConsent.svelte';
 </script>
 <svelte:head>
   <title>Corrupted - {pagetitle}</title>
@@ -96,3 +97,4 @@
     }
   }
 </style>
+<CookieConsent />
