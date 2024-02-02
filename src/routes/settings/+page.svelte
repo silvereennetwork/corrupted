@@ -23,11 +23,11 @@
 
 <!-- Navigation bar -->
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3 z-10">
-  <a class="text-white hover:text-indigo-300 transition-colors duration-200 flex items-center" href="/">
+  <a class="duration-150 hover:opacity-25 flex items-center" href="/">
     <span>Home</span>
   </a>
-  <a class="text-white hover:text-indigo-300 transition-colors duration-200 flex items-center" href="/settings">
-    <span>Settings</span>
+  <a class="duration-150 hover:opacity-25 flex items-center" href="/play">
+    <span>Games</span>
   </a>
 </div>
 
