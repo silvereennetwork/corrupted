@@ -12,14 +12,10 @@
     tabTitle = localStorage.getItem('customTitle') || '';
   });
 
-  function updateIconUrl(event) {
-    iconUrl = event.target.value;
+  function applyChanges() {
     localStorage.setItem('customIcon', iconUrl);
-  }
-
-  function updateTabTitle(event) {
-    tabTitle = event.target.value;
     localStorage.setItem('customTitle', tabTitle);
+    location.reload();
   }
 </script>
 
@@ -40,7 +36,7 @@
 
   <div class="bg-gray-800 shadow overflow-hidden sm:rounded-lg p-6 mt-4">
     <div class="text-section sm:mr-4">
-      <h2 class="text-left text-2xl p-2">Analytics and Data</h2>
+      <h2 class="text-left text-2xl pb-4">Analytics and Data</h2>
       <p class="text-left text-xl">
         <label class="flex items-center">
           <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" />
@@ -48,20 +44,23 @@
         </label>
       </p>
 
-      <h2 class="text-left text-2xl p-2">Custom Tab Icon</h2>
+      <h2 class="text-left text-2xl py-4">Custom Tab Icon</h2>
       <p class="text-left text-xl">
         <label class="block">
           <span class="text-white">URL:</span>
-          <input type="text" bind:value={iconUrl} on:input={updateIconUrl} class="form-input mt-1 block w-full rounded-md" placeholder="Enter URL of the custom tab icon" />
+          <input type="text" bind:value={iconUrl} class="form-input mt-1 block w-full text-black rounded-md" placeholder="Enter URL of the custom tab icon" />
         </label>
       </p>
 
-      <h2 class="text-left text-2xl p-2">Custom Tab Title</h2>
+      <h2 class="text-left text-2xl py-4">Custom Tab Title</h2>
       <p class="text-left text-xl">
         <label class="block">
           <span class="text-white">Title:</span>
-          <input type="text" bind:value={tabTitle} on:input={updateTabTitle} class="form-input mt-1 block w-full rounded-md" placeholder="Enter custom tab title" />
+          <input type="text" bind:value={tabTitle} class="form-input mt-1 block w-full text-black rounded-md" placeholder="Enter custom tab title" />
       </p>
+      <button on:click={applyChanges} class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md">
+        Apply changes
+      </button>
     </div>
   </div>
 </div>
