@@ -1,6 +1,21 @@
 <script>
   import "../app.css";
   export let pagetitle = "";
+  import CookieConsent from './cookieConsent.svelte';
+  import { onMount } from 'svelte';
+
+onMount(() => {
+  const customIcon = localStorage.getItem('customIcon');
+  const customTitle = localStorage.getItem('customTitle');
+
+  if (customIcon) {
+    document.querySelector('link[rel="icon"]').href = customIcon;
+  }
+
+  if (customTitle) {
+    document.title = customTitle;
+  }
+});
 </script>
 <svelte:head>
   <title>Corrupted - {pagetitle}</title>
@@ -9,6 +24,8 @@
   <meta content="https://corruptedgaming.online/" property="og:url" />
   <meta content="https://corruptedgaming.online/corrupted-logo.png" property="og:image" />
   <meta content="#1f2937" data-react-helmet="true" name="theme-color" />
+  <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="/corrupted-logo.png" rel="shortcut icon" type="image/x-icon" />
 </svelte:head>
 
 <slot />
@@ -96,3 +113,4 @@
     }
   }
 </style>
+<CookieConsent />

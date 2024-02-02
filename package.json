@@ -24,7 +24,6 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/kit": "^1.30.3",
-    "html2canvas": "^1.4.1",
     "prettier-plugin-tailwindcss": "^0.5.11"
   }
 }
