@@ -9,6 +9,7 @@
 
   export const data: any = null;
   let game = {};
+  const isEmbed = window.location.search.includes("embed");
 
   onMount(async () => {
     try {
@@ -46,6 +47,16 @@
     }
   });
 
+  // are we embedded?
+  if (isEmbed) {
+    // TODO focus on the game frame
+    // hide pretty much everything else
+    let header = document.querySelector('header');
+    let footer = document.querySelector('footer');
+    if (header) header.style.display = 'none';
+    if (footer) footer.style.display = 'none';
+  }
+
   // refresh the game
   function refreshGame() {
     if (confirm("WARNING: \n By clicking continue, you will reload the game and may lose game progress or game data.") == true) {
@@ -60,16 +71,18 @@
   function share() {
     console.log('share')
     let link = window.location.href;
+    let embedCodeDiv = document.getElementById('embedCode');
+    let sharePopup = document.getElementById('sharePopup');
     let embedCode = `<iframe src="${link}?embed" width="100%" height="600px" allowfullscreen></iframe>`;
-    document.getElementById('embedCode').value = embedCode;
-    document.getElementById('sharePopup').style.display = 'block';
+    if (embedCodeDiv) embedCodeDiv.value = embedCode;
+    if (sharePopup) sharePopup.style.display = 'block';
   }
   function copyLink() {
     const copyLink = document.getElementById('copyLink');
     navigator.clipboard.writeText(window.location.href);
-    copyLink.innerHTML = 'Copied!';
+    if (copyLink) copyLink.innerHTML = 'Copied!';
     setTimeout(() => {
-      copyLink.innerHTML = 'Copy Link';
+      if (copyLink) copyLink.innerHTML = 'Copy Link';
     }, 2000);
   }
 </script>
