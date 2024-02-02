@@ -1,8 +1,13 @@
 <script>
-  let consent = localStorage.getItem('cookie-consent');
+  import { onMount } from 'svelte';
+  let consent = false;
+  onMount(() => {
+    consent = localStorage.getItem('cookie-consent');
+  });
 
   function acceptCookies() {
     localStorage.setItem('cookie-consent', 'accepted');
+    console.log('Cookies accepted');
     consent = 'accepted';
   }
 </script>
