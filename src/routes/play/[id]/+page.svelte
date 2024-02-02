@@ -1,9 +1,8 @@
 <script lang="ts">
   // Import necessary modules
   import { onMount } from "svelte";
-  import html2canvas from 'html2canvas';
   import { page } from "$app/stores";
-  
+
   // Import Svelte components
   import Layout from "../../../components/layout.svelte";
   import Footer from "../../../components/footer.svelte";
@@ -19,7 +18,7 @@
 
       // fetch the games data
       const response = await fetch("/games.json");
-      
+
       // response check
       if (!response.ok) {
         console.error("Failed to fetch games.json:", response.status, response.statusText);
@@ -58,23 +57,60 @@
     }
   }
 
-  // screenshot
-  // TODO: fix screenshot it broken :L
-  async function takeScreenshot() {
-    const canvas = await html2canvas(document.body);
-    const img = canvas.toDataURL("image/png");
-
-    // Do something with the image data, like download it
-    const link = document.createElement('a');
-    link.download = 'screenshot.png';
-    link.href = img;
-    link.click();
+  function share() {
+    console.log('share')
+    let link = window.location.href;
+    let embedCode = `<iframe src="${link}?embed" width="100%" height="600px" allowfullscreen></iframe>`;
+    document.getElementById('embedCode').value = embedCode;
+    document.getElementById('sharePopup').style.display = 'block';
+  }
+  function copyLink() {
+    const copyLink = document.getElementById('copyLink');
+    navigator.clipboard.writeText(window.location.href);
+    copyLink.innerHTML = 'Copied!';
+    setTimeout(() => {
+      copyLink.innerHTML = 'Copy Link';
+    }, 2000);
   }
 </script>
+<Layout pagetitle={game.title} />
+
+<div id="sharePopup" class="fixed z-40 inset-0 overflow-y-auto" style="display: none" aria-labelledby="sharePopupLabel" role="dialog" aria-modal="true">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+    <div class="relative inline-block align-bottom bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+      <div class="bg-indigo-700 px-4 py-5 sm:p-6 sm:pb-4">
+        <div class="sm:flex sm:items-start">
+          <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-indigo-500 sm:mx-0 sm:h-10 sm:w-10">
+            <i class="fas fa-share text-white text-2xl"></i>
+          </div>
+          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+            <h3 class="text-lg leading-6 font-medium text-white" id="sharePopupLabel">Share Game</h3>
+            <div class="mt-2">
+              <p class="text-sm text-gray-200">Share this game with a link or embed it on a site</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 sm:px-6 sm:flex sm:flex-row items-stretch space-x-4">
+        <span class="text-lg flex items-center">Embed code: </span>
+        <input id="embedCode" type="text" readonly class="text-lg w-full bg-gray-500 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 sm:w-1/2 sm:text-right">
+        <button class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-700 text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
+          on:click={() => navigator.clipboard.writeText(document.getElementById('embedCode').value)}>
+          <div class="text-lg"><i class="fas fa-copy"></i></div>
+        </button>
+      </div>
+      <button type="button" id="copyLink" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-700 text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"on:click={copyLink}>Copy Game Link</button>
+      <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-700 text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm mx-auto mt-auto mb-4" onclick="document.getElementById('sharePopup').style.display = 'none';">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- Font Awesome stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<Layout pagetitle={game.title} />
 
 <!-- Navigation bar -->
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav  flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
@@ -110,7 +146,7 @@
       </div>
       <div class="icons flex gap-4">
         <!-- Buttons for taking a screenshot, opening in a new tab, going fullscreen, and reloading the game -->
-        <i class="fas fa-camera text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={takeScreenshot} on:keydown={() => {}} title="Screenshot"></i>
+        <i class="fas fa-share text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={share} on:keydown={() => {}} title="Screenshot"></i>
         <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => window.open(game.link)} on:keydown={() => {}} title="Open in new tab"></i>
         <i class="fas fa-expand text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}} title="Fullscreen"></i>
         <i class="fas fa-sync-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={refreshGame} on:keydown={() => {}} title="Reload"></i>
