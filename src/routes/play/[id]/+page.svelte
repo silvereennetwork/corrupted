@@ -9,7 +9,13 @@
 
   export const data: any = null;
   let game = {};
-  const isEmbed = window.location.search.includes("embed");
+  let windowDefined = typeof window !== "undefined";
+  let isEmbed = false;
+
+  if (windowDefined) {
+    console.log("window is defined");
+    isEmbed = window.location.search.includes("embed");
+  }
 
   onMount(async () => {
     try {
@@ -49,12 +55,15 @@
 
   // are we embedded?
   if (isEmbed) {
+    console.log('we are embedded');
     // TODO focus on the game frame
     // hide pretty much everything else
     let header = document.querySelector('header');
     let footer = document.querySelector('footer');
     if (header) header.style.display = 'none';
     if (footer) footer.style.display = 'none';
+  } else {
+    console.log('we are not embedded');
   }
 
   // refresh the game
@@ -67,9 +76,7 @@
       }, 50);
     }
   }
-
   function share() {
-    console.log('share')
     let link = window.location.href;
     let embedCodeDiv = document.getElementById('embedCode');
     let sharePopup = document.getElementById('sharePopup');
@@ -88,6 +95,7 @@
 </script>
 <Layout pagetitle={game.title} />
 
+<!-- Share popup -->
 <div id="sharePopup" class="fixed z-40 inset-0 overflow-y-auto" style="display: none" aria-labelledby="sharePopupLabel" role="dialog" aria-modal="true">
   <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
@@ -124,45 +132,45 @@
 
 <!-- Font Awesome stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Navigation bar -->
-<div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav  flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
-  <a class="duration-150 hover:opacity-25 flex items-center" href="/">
-    <span>Home</span>
-  </a>
-  <a class="duration-150 hover:opacity-25 flex items-center" href="/play">
-    <span>Games</span>
-  </a>
-</div>
-
+{#if !isEmbed}
+  <!-- Navigation bar -->
+  <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav  flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
+    <a class="duration-150 hover:opacity-25 flex items-center" href="/">
+      <span>Home</span>
+    </a>
+    <a class="duration-150 hover:opacity-25 flex items-center" href="/play">
+      <span>Games</span>
+    </a>
+  </div>
+{/if}
 <!-- Main content area -->
 <div class="flex justify-center items-center h-screen">
   <div class="w-4/5 mx-auto pt-[70px]">
     {#if game.title}
+    <div class={isEmbed ? 'flex flex-col h-screen' : ''}>
     <!-- Display the game frame if a game is found -->
-    <div class="game-frame border border-black overflow-hidden mb-2 rounded-lg">
-      <iframe title="Game Frame" class="z-10" src="{game.link}" width="100%" height="600px"></iframe>
-    </div>
-
-    <!-- Game information and menu bar -->
-    <div class="menu-bar bg-indigo-700 flex justify-between rounded-lg items-center px-4 py-2">
-      <div class="game-info flex gap-4">
-        <span class="game-title text-white text-lg">{game.title}</span>
-        <span class="game-creator text-gray-300 text-lg">By {game.author}</span>
+      <div class={`game-frame border border-black overflow-hidden mb-2 rounded-lg ${isEmbed ? 'flex-grow' : ''}`}>
+        <iframe title="Game Frame" class="z-10" src="{game.link}" width="100%" height="600px"></iframe>
       </div>
-      <div class="game-info flex gap-4">
-        <div class="tags">
-          {#each game.tags as tag}
-          <span class="text-white text-sm mr-1 bg-indigo-500 rounded-lg px-2 py-1">{tag}</span>
-          {/each}
+      <!-- Game information and menu bar -->
+      <div class="menu-bar bg-indigo-700 flex justify-between rounded-lg items-center px-4 py-2">
+        <div class="game-info flex gap-4">
+          <span class="game-title text-white text-lg">{game.title}</span>
+          <span class="game-creator text-gray-300 text-lg">By {game.author}</span>
         </div>
-      </div>
-      <div class="icons flex gap-4">
-        <!-- Buttons for taking a screenshot, opening in a new tab, going fullscreen, and reloading the game -->
-        <i class="fas fa-share text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={share} on:keydown={() => {}} title="Screenshot"></i>
-        <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => window.open(game.link)} on:keydown={() => {}} title="Open in new tab"></i>
-        <i class="fas fa-expand text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}} title="Fullscreen"></i>
-        <i class="fas fa-sync-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={refreshGame} on:keydown={() => {}} title="Reload"></i>
+        <div class="game-info flex gap-4">
+          <div class="tags">
+            {#each game.tags as tag}
+            <span class="text-white text-sm mr-1 bg-indigo-500 rounded-lg px-2 py-1">{tag}</span>
+            {/each}
+          </div>
+        </div>
+        <div class="icons flex gap-4">
+          <!-- Buttons for taking a screenshot, opening in a new tab, going fullscreen, and reloading the game -->
+          <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => window.open(game.link)} on:keydown={() => {}} title="Open in new tab"></i>
+          <i class="fas fa-expand text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}} title="Fullscreen"></i>
+          <i class="fas fa-sync-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={refreshGame} on:keydown={() => {}} title="Reload"></i>
+        </div>
       </div>
     </div>
     {:else}
@@ -185,4 +193,6 @@
     {/if}
   </div>
 </div>
-<Footer />
+{#if !isEmbed}
+  <Footer />
+{/if}
