@@ -166,7 +166,8 @@
           </div>
         </div>
         <div class="icons flex gap-4">
-          <!-- Buttons for taking a screenshot, opening in a new tab, going fullscreen, and reloading the game -->
+          <!-- Buttons for sharing, opening in a new tab, going fullscreen, and reloading the game -->
+          <i class="fas fa-share text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={share} on:keydown={() => {}} title="Share"></i>
           <i class="fas fa-external-link-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => window.open(game.link)} on:keydown={() => {}} title="Open in new tab"></i>
           <i class="fas fa-expand text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={() => document.querySelector('.game-frame iframe')?.requestFullscreen()} on:keydown={() => {}} title="Fullscreen"></i>
           <i class="fas fa-sync-alt text-white text-lg cursor-pointer" role="button" tabindex="0" on:click={refreshGame} on:keydown={() => {}} title="Reload"></i>
