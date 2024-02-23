@@ -1,13 +1,9 @@
 <script>
   import Layout from "../../components/layout.svelte";
   import Footer from "../../components/footer.svelte";
-  import { onMount } from "svelte";
-  onMount(() => {
-    document.title = "Corrupted";
-  });
 </script>
 
-<Layout />
+<Layout pagetitle="Terms of service" />
 
 <!-- Navigation bar -->
 <div class="w-11/12 mx-auto h-18 bg-indigo-700 text-4xl text-center nav fixed top-0 left-0 right-0 flex justify-around items-center py-3 rounded-lg shadow-lg mt-3">
@@ -27,7 +23,7 @@
 </div>
 
 <div class="p-16">
-  <div class="xpand overflow-hidden rounded-md">
+  <div class="xpand overflow-hidden rounded-lg">
     <div class="text-section sm:mr-4">
       <h2 class="text-left text-xl p-2">1. Acceptance of Terms</h2>
       <p class="text-left text-md">

@@ -5,34 +5,29 @@
   import Alerts from "../../components/alerts.svelte";
   import { onMount } from "svelte";
 
-  // Set the page title
-  var pagetitle = "Corrupted - Games";
-
   /**
    * Define variables and their initial values
    * @type {any[]}
    */
-  let games = [];
   let search = "";
   let isLoading = true;
+  let games = [];
 
-  // Lifecycle hook: Runs after the component is first added to the DOM
   onMount(async () => {
-    // Fetch games data from the server
-    const response = await fetch("/games.json");
-
-    // Parse the JSON response and update the games variable
+    const response = await fetch('/games.json');
     games = await response.json();
-    
-    // Set isLoading to false after data is loaded
     isLoading = false;
   });
 
   /**
    * Filter visible games based on the search input
-   * @param {{ title: string; }} game
+   * @param {{ title: string; }} game - The game object to be filtered
+   * @returns {any[]} - The filtered list of games
    */
-  $: visibleGames = games.filter((game) => game.title.toLowerCase().includes(search.toLowerCase()));
+   $: visibleGames = games.filter((game) => 
+    game.title.toLowerCase().includes(search.toLowerCase()) ||
+    game.tags.some(tag => tag.toLowerCase().includes(search.toLowerCase()))
+  );
 </script>
 
 <style>
@@ -44,10 +39,17 @@
   .xpand:hover {
     transform: scale(1.05);
   }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 </style>
 
 <!-- Include Svelte components -->
-<Layout />
+<Layout pagetitle="Games" />
 <Alerts />
 
 <!-- Navigation bar -->
@@ -61,7 +63,7 @@
 </div>
 
 <!-- Search input box -->
-<div id="searchBox" class="mt-20 mb-5">
+<div id="searchBox" class="mt-20">
   <input bind:value="{search}" placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
 </div>
 
@@ -94,10 +96,17 @@
         <h2 class="tracking-wide text-2xl text-indigo-300 font-semibold">{game.title}</h2>
       </div>
       <div class="my-0">
-        <img class="h-48 w-48 rounded-md object-cover m-2" src="{game.image}" alt="{game.title}" />
+        <img class="h-48 w-48 rounded-lg object-cover m-2" src="{game.image}" alt="{game.title}" />
       </div>
-      <div class="p-2">
-        <p class="text-gray-300">{game.description}</p>
+      <div class="p-2 overflow-x-auto scrollbar-hide" style="white-space: nowrap; overflow-x: scroll;">
+        {#each game.tags as tag}
+        <div class="inline-flex items-center justify-center">
+          <button class="text-white text-sm mr-1 bg-indigo-600 rounded-lg px-2 py-1" 
+            on:click={(event) => {event.stopPropagation();search = tag;}} role="button">{tag}
+          </button>
+        </div>
+        {/each}
+        <p class="text-gray-300 text-center">{game.description}</p>
       </div>
     </div>
   </a>

@@ -2,6 +2,7 @@
   <p class="text-2xl">© 2023 Corrupted. Made with ❤️ by Silvereen Network</p>
   <div class="flex justify-center space-x-4 text-lg">
     <a href="/tos" class="duration-150 hover:opacity-25">Terms of Service</a>
+    <a href="/settings" class="duration-150 hover:opacity-25">Settings</a>
     <a href="https://discord.gg/discord" class="duration-150 hover:opacity-25" target="_blank" rel="noopener noreferrer">Discord</a>
     <a href="https://github.com/silvereennetwork/corrupted" class="duration-150 hover:opacity-25" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
