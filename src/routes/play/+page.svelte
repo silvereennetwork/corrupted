@@ -24,7 +24,10 @@
    * @param {{ title: string; }} game - The game object to be filtered
    * @returns {any[]} - The filtered list of games
    */
-  $: visibleGames = games.filter((game) => game.title.toLowerCase().includes(search.toLowerCase()));
+   $: visibleGames = games.filter((game) => 
+    game.title.toLowerCase().includes(search.toLowerCase()) ||
+    game.tags.some(tag => tag.toLowerCase().includes(search.toLowerCase()))
+  );
 </script>
 
 <style>
@@ -60,7 +63,7 @@
 </div>
 
 <!-- Search input box -->
-<div id="searchBox" class="mx-20">
+<div id="searchBox" class="mt-20">
   <input bind:value="{search}" placeholder="Search games..." class="w-11/12 mx-auto block bg-gray-800 text-white shadow-md rounded-lg p-3 outline-none focus:ring-2 focus:ring-indigo-400" />
 </div>
 
@@ -98,7 +101,9 @@
       <div class="p-2 overflow-x-auto scrollbar-hide" style="white-space: nowrap; overflow-x: scroll;">
         {#each game.tags as tag}
         <div class="inline-flex items-center justify-center">
-          <span class="text-white text-sm mr-1 bg-indigo-600 rounded-lg px-2 py-1">{tag}</span>
+          <button class="text-white text-sm mr-1 bg-indigo-600 rounded-lg px-2 py-1" 
+            on:click={(event) => {event.stopPropagation();search = tag;}} role="button">{tag}
+          </button>
         </div>
         {/each}
         <p class="text-gray-300 text-center">{game.description}</p>
